@@ -19,7 +19,7 @@ docker compose up -d
 **From here on everything I will explain will be done assuming you are already inside the docker container.**
 
 ### Create pytorch model and export it to ONNX
-A pre-trained resnet50 Pytorch model must be created and exported to ONNX. In the file [generate_onnx.py](https://github.com/maximofn/ds_resnet50/blob/master/generate_onnx.py) a pre-trained resnet50 pytorch model is created and exported to ONNX. The code works, it will generate you the file `resnet50_pytorch_BS1.onnx`, but the way it exports the model to ONNX I don't know if it is the right way.
+A pre-trained resnet50 Pytorch model must be created and exported to ONNX. In the file [generate_onnx.py](https://github.com/maximofn/ds_resnet50/blob/master/deepstream/generate_onnx.py) a pre-trained resnet50 pytorch model is created and exported to ONNX. The code works, it will generate you the file `resnet50_pytorch_BS1.onnx`, but the way it exports the model to ONNX I don't know if it is the right way.
 
 ### The job
 Your job will be to change the way of exporting the model to ONNX (if necessary), then export it to engine and create the pipeline with deepstream on Python that:
